@@ -8,6 +8,7 @@ function addPlayer(){
 	var playerName = playerInput.value;
 	playerInput.value = "";
 	playerTable.innerHTML += "<tr class='player'><th id='player-name'>" + playerName + "</th><th id='player-points' contenteditable></th></tr>";
+	sort();
 }
 
 function getPlayers(){
