@@ -1,0 +1,3 @@
+# Scoreboard
+A simple Scoreboard webapp for our class-intern Poetry Slam.
+Click [This link](http://example.net/) to see it....
