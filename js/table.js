@@ -1,5 +1,5 @@
 var playerTable = document.querySelector("#players");
-var playerInput = document.querySelector("#player-name");
+var playerInput = document.querySelector("#slammertable #player-name");
 var addButton = document.querySelector("#add-player");
 
 // table methods
@@ -7,7 +7,7 @@ var addButton = document.querySelector("#add-player");
 function addPlayer(){
 	var playerName = playerInput.value;
 	playerInput.value = "";
-	playerTable.innerHTML += "<tr class='player'><th id='player-name'>" + playerName + "</th><th id='player-points' contenteditable></th></tr>";
+	playerTable.innerHTML += "<tr class='player'><th id='player-name'>" + playerName + "</th><th id='player-points'>0</th></tr>";
 	sort();
 }
 
@@ -32,14 +32,21 @@ function sort(){
 		var parentNode = player.parentNode;
 		parentNode.removeChild(player);
 		parentNode.appendChild(points[i].element);
-		console.log(player);
-		console.log(parentNode);
 	});
 	
 
 }
 
+function addPoints(event){
+	var playerName = document.querySelector("#points #player-name");
+
+	if(event.target.id == "player-points"){
+		var tablePlayer = event.target.parentNode.querySelector("#player-name").innerHTML;
+		toggle();
+		playerName.innerHTML = tablePlayer;
+	}
+}
 
 // event binding
 addButton.addEventListener("click", addPlayer);
-
+playerTable.addEventListener("click", addPoints);

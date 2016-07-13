@@ -7,19 +7,26 @@
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
-	<h1></div>Poetry Slam</h1>
-	<div class="card">
-		<input placeholder="Slammer" class="texteingabe"id="player-name"></input>
+	<h1>Poetry Slam</h1>
+	<div class="card" id="points" hidden>
+		<h2>Punkte vergeben für <span id="player-name" contenteditable>Name</span></h2>
+		<input class="texteingabe jury" placeholder="Jury"></input>
+		<input class="texteingabe jury" placeholder="Jury"></input>
+		<input class="texteingabe jury" placeholder="Jury"></input><br>
+		<button id="add-points">Punkte vergeben</button>
+	</div>
+	<div class="card" id="slammertable">
+		<input placeholder="Slammer" class="texteingabe" id="player-name"></input>
 		<button id="add-player" class="actionbtn">+</button></h2>
-	<table id="players">
-
-
-		<tr>
-			<th><span style="font-weight:normal">Name</span></th>
-			<th><span style="font-weight:normal">Punktzahl</span></th>
-		</tr>
-	</table>
-</div>
+		<table id="players">
+			<tr>
+				<th><span style="font-weight:normal">Name</span></th>
+				<th><span style="font-weight:normal">Punktzahl</span></th>
+			</tr>
+		</table>
+	</div>
+	<script src="js/app.js"></script>
 	<script src="js/table.js"></script>
+	<script src="js/points.js"></script>
 </body>
 </html>
