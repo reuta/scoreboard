@@ -100,6 +100,7 @@ table {
 
 }
 h1{
+  cursor:default;
   -webkit-user-select: none; /* Chrome/Safari */
 -moz-user-select: none; /* Firefox */
   text-align: center;
