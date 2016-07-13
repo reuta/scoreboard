@@ -22,8 +22,8 @@ body{
   font-family: 'Roboto', sans-serif;
   text-align: center;
   transition: 0.5s ease-in-out;
-  -webkit-animation: slidein 0.5s;
-  -moz-animation: slidein 0.5s;
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
 }
 .actionbtn{
   border: 2px solid  #00796B;
@@ -44,6 +44,7 @@ body{
     height:1.5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .actionbtn:active {
   border: none;
   transition: 0.3s cubic-bezier(0.2,0.5,0.55,1);
@@ -100,7 +101,7 @@ table {
 }
 h1{
   text-align: center;
-  color:  #888888;
+  color:  #333333;
   width: 100%;
   height:auto;
   font-weight: 100;
@@ -108,7 +109,7 @@ h1{
   padding: 10px;
   font-family: 'Roboto', sans-serif;
   position:fixed -webkit-trantform: translateY(0);
-  border-bottom: 4px solid #00796B;
+  /*border-bottom: 4px solid #00796B;*/
     text-decoration: none;
     font-weight: normal;
     width:auto;
@@ -124,23 +125,46 @@ input[placeholder]:hover :active{
   width: 50%;
 
 }
-@-webkit-keyframes slidein {
-  from{-webkit-transform: translateY(500%)}
-  to{-webkit-transform: translateY(0)}
 
-}
 @-webkit-keyframes fadein {
   from{opacity:0}
   to{opacity:1}
 
 }
-@-moz-keyframes slidein {
-  from{-moz-transform: translateY(500%)}
-  to{-moz-transform: translateY(0)}
 
-}
 @-moz-keyframes fadein {
   from{opacity:0}
   to{opacity:1}
 
+}
+.normalbtn{
+  border: 2px solid  lightgrey;
+  background-color: lightgrey;
+    color: grey;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    outline:none;
+    border-radius: 3px;
+    font-weight: bolder;
+    width:auto;
+    height:auto;
+    font-weight: lighter;
+    text-transform: uppercase;
+
+}
+.normalbtn:active {
+  opacity: 0.5;
+  transition: 0.3s cubic-bezier(0.2,0.5,0.55,1);
+
+
+}
+h2{
+   color:#444444;
+   font-weight: 300;
 }
