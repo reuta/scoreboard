@@ -1,23 +1,19 @@
 
-  
+
 
 body{
   background-color: #fafafa;
   margin:0px;
     padding:0px;
 }
-h1{
-  text-decoration: none;
-  font-weight: normal;
-  width:100%;
-  background-color: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-}
-#card{
+
+.card{
+  margin-top: 20%;
   background-color: white;
   width:80%;
   height:auto;
   margin:auto;
+  margin-bottom: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px;
   border-radius: 2px;
@@ -25,30 +21,35 @@ h1{
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  transition: 0.5s ease-in-out
+  transition: 0.5s ease-in-out;
+  -webkit-animation: slidein 0.5s;
+  -moz-animation: slidein 0.5s;
 }
-.button{
-  border: 2px solid #FF8A65;
-  background-color: #FF8A65;
+.actionbtn{
+  border: 2px solid  #00796B;
+  background-color: #00796B;
     color: white;
-    padding: 5px 5px;
+
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5em;
     margin: 4px 2px;
     cursor: pointer;
     margin:auto;
      outline:none;
-    border-radius: 2px;
-    font-weight: normal;
-
+    border-radius: 50% 50%;
+    font-weight: bolder;
+    width:1.5em;
+    height:1.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.button:active {
-  transition: 0.3s ease-in-out;
-  border: 2px solid #FF8A65;
-  background-color: white;
+.actionbtn:active {
+  border: none;
+  transition: 0.3s cubic-bezier(0.2,0.5,0.55,1);
+  background-color: lightgrey;
   color: grey;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 input.texteingabe{
   border: none;
@@ -73,6 +74,7 @@ input.texteingabe:hover{
 
   transition: 0.5s ease-in-out;
   border-bottom: 1px solid grey;
+
 
 }
 input.texteingabe:active{
@@ -101,16 +103,44 @@ h1{
   color:  #888888;
   width: 100%;
   height:auto;
-  background-color: white;
+  font-weight: 100;
   margin: none;
   padding: 10px;
-  border-bottom: 2px solid #FF8A65;
   font-family: 'Roboto', sans-serif;
+  position:fixed -webkit-trantform: translateY(0);
+  border-bottom: 4px solid #00796B;
+    text-decoration: none;
+    font-weight: normal;
+    width:auto;
+    background-color:white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s
 
 }
 input[placeholder]:hover :active{
   color:darkgrey;
   transition: 0.5s ease-in-out;
   width: 50%;
+
+}
+@-webkit-keyframes slidein {
+  from{-webkit-transform: translateY(500%)}
+  to{-webkit-transform: translateY(0)}
+
+}
+@-webkit-keyframes fadein {
+  from{opacity:0}
+  to{opacity:1}
+
+}
+@-moz-keyframes slidein {
+  from{-moz-transform: translateY(500%)}
+  to{-moz-transform: translateY(0)}
+
+}
+@-moz-keyframes fadein {
+  from{opacity:0}
+  to{opacity:1}
 
 }
