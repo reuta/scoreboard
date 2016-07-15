@@ -1,7 +1,7 @@
 x=0
 function changedarkness() {
   x++
-  if (x&2) {
+  if (x&1) {
     document.getElementById("header").style.backgroundColor="#555555"
     document.getElementById("header").style.color="lightgrey"
     document.getElementById("body").style.backgroundColor="#333333"
