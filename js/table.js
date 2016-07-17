@@ -27,7 +27,7 @@ function sort(){
 	points.sort(function(a, b){
 		return b.points - a.points;
 	});
-	
+
 	Array.prototype.forEach.call(players, function(player, i){
 		var parentNode = player.parentNode;
 		parentNode.removeChild(player);

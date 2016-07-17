@@ -1,12 +1,19 @@
-var points = document.querySelector("#points");
+var pointsInput = document.querySelector("#points");
 
 function sum(){
-	var inputs = points.querySelectorAll(".jury");
-	console.log(inputs);
+	var inputs = pointsInput.querySelectorAll(".jury");
+	var points = Array.prototype.map.call(inputs, function(input){
+		return parseInt(input.value);
+	});
+	
+	points.sort(function(a, b){return b-a});
+
+	points.pop();
+	points.shift();
+
 	var sum = 0;
-	Array.prototype.forEach.call(inputs, function(input){
-		sum += parseInt(input.value);
-		input.value = "";
+	points.forEach(function(point){
+		sum += point;
 	});
 
 	return sum;
