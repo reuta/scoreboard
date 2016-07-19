@@ -3,7 +3,7 @@ var pointsInput = document.querySelector("#points");
 function sum(){
 	var inputs = pointsInput.querySelectorAll(".jury");
 	var points = Array.prototype.map.call(inputs, function(input){
-		return parseInt(input.value);
+		return parseFloat(input.value);
 	});
 	
 	points.sort(function(a, b){return b-a});
