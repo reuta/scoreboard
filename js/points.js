@@ -3,7 +3,7 @@ var pointsInput = document.querySelector("#points");
 function sum(){
 	var inputs = pointsInput.querySelectorAll(".jury");
 	var points = Array.prototype.map.call(inputs, function(input){
-		return parseFloat(input.value).toFixed(1);
+		return parseFloat(input.value);
 	});
 	
 	points.sort(function(a, b){return b-a});
@@ -16,7 +16,7 @@ function sum(){
 		sum += point;
 	});
 
-	return sum;
+	return sum.toFixed(1);
 }
 
 function fillNum(playerName, num){
